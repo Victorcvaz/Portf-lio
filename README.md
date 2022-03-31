@@ -8,6 +8,6 @@ O controle dessas tarefas será realizado no GitHub
 ## ícones
 
 :package: nova funcionalidade
-:up: atualiação
-:beatle: correção de bug
-:checkered: release
+:ok_hand: atualiação
+:beetle: correção de bug
+:thumbsup: release
