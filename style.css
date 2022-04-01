@@ -5,6 +5,53 @@
 *{
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --font-primary: "Baloo Da 2", serif;
+    --font-secundary: "Josefin Slab", serif;
+    --font-action: "Muli", serif;
+}
+
+.hamburguer{
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    z-index: 100;
+    right: 2rem;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.show-menu .hamburguer{
+    right: 16rem;
+    transition: all 1s;
+}
+
+.line{
+    width: 100%;
+    height: .1rem;
+    background-color: #fff;
+    box-shadow: 0.1rem 0.1rem 1px #000;
+    cursor: pointer;
+    transition: transform 1s;
+}
+
+.show-menu #line1{
+    transform: rotate(45deg) translate(.3rem, .4rem);
+}
+
+.show-menu #line2{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.show-menu #line3{
+    transform: rotate(-45deg) translate(.3rem, -.45rem);
 }
 
 header{
@@ -46,7 +93,7 @@ header{
 .banner h1{
     color: #ffffff;
     font-size: 3.5rem;
-    font-family: "Baloo Da 2", serif;
+    font-family: var(--font-primary);
     font-weight: 200;
     text-shadow: 0.2rem 0.3rem 2px rgba(0,0,0, .4);
     line-height: 3.5rem;
@@ -56,7 +103,7 @@ header{
 }
 
 .banner p{
-    font: "Josefin Slab", serif;
+    font: var(--font-secundary);
     color: #fff;
     font-size: 2rem;
     text-shadow: 0.2rem 0.2rem rgba(0,0,0, .4);
@@ -66,7 +113,7 @@ header{
 }
 
 .banner button{
-    font-family: "Muli", serif;
+    font-family: var(--font-action);
     color: #fff;
     text-transform: uppercase;
     letter-spacing: .1rem;
@@ -90,4 +137,66 @@ header{
         opacity: 1;
     }
 
+}
+
+.sidebar{
+    width: 20rem;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.9);
+    position: fixed;
+    top: 0;
+    right: -20rem;
+    transition: all 1s;
+}
+
+.show-menu .sidebar{
+    right: 0;
+}
+
+
+.menu{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu-item{
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+.menu-link{
+    font-family: var(--font-action);
+    font-size: 2rem;
+    color: #6441A5;
+    transition: color 1s;
+}
+
+.menu-link:hover{
+    color: #fff;
+}
+
+.social-media{
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.social-media i{
+    background-color: rgba(0,0,0,0.1);
+    color: #50068b;
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: color 2s;
+}
+.social-media i:hover{
+    color: #fff;
 }
