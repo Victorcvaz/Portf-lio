@@ -8,8 +8,12 @@ document.querySelector("#layout-sim").addEventListener("change", atualizarPreco)
 document.querySelector("#layout-nao").addEventListener("change", atualizarPreco)
 document.querySelector("#prazo").addEventListener("change", function(){
     const prazo = document.querySelector("#prazo").value
-    document.querySelector("label[for=prazo]").innerHTML = `Prazo: ${prazo} Semanas` 
-    atualizarPreco()
+    if (prazo == 1){
+    document.querySelector("label[for=prazo]").innerHTML = `Prazo: ${prazo} Semana` 
+    }else{
+    document.querySelector("label[for=prazo]").innerHTML = `Prazo: ${prazo} Semanas`   
+    }
+    atualizarPreco()  
 })
 
 function atualizarPreco(){

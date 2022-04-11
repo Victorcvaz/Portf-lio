@@ -17,7 +17,10 @@
 
 html{
     scroll-behavior: smooth;
+
 }
+
+
 
 .hamburguer{
     width: 2rem;
@@ -96,6 +99,7 @@ header{
     position: absolute;
     top: 30%;
     left: 15%;
+    
 }
 
 .banner h1{
@@ -207,7 +211,7 @@ header{
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    transition: color 2s;
+    transition: color .8s;
 }
 .social-media i:hover{
     color: #fff;
@@ -469,7 +473,6 @@ header{
     font-size: 1.2rem;
     text-transform: uppercase;
     transition: all 0.3s;
-   
 }
 
 .field:focus ~ label{
@@ -532,6 +535,10 @@ header{
     grid-template-columns: auto 1fr;
     column-gap: 2rem;
     row-gap: 2rem;
+}
+
+input#js{
+   margin-right: 21rem;
 }
 
 .sessao-orcamento label{
@@ -605,3 +612,118 @@ footer{
     box-shadow: 0 0.1rem 0.6rem #000000;
     font-size: 1.3rem;
 }
+
+@media (max-width: 599px) {
+    html{
+        font-size: 37%
+    } 
+
+    .banner button {
+        font-size: 35%;
+    }
+    .card-info button {
+        font-size: 35%;
+    }
+
+
+    .btn{
+        font-size: 35%;
+    }
+
+    .card-info{
+        top: 6rem;
+    }
+    
+    .sessao-contato {
+        height: 40vh;
+    }
+
+    .sessao-orcamento{
+        height: 40vh;
+    }
+
+    .conhecimentos{
+        display: grid;
+        grid-template-columns: repeat(16, 1fr);
+        grid-template-rows: repeat(6, 8rem);
+        row-gap: 3rem;
+    }
+
+    .conhecimentos-img-wrapper{
+        grid-column: 7 / 10;
+        grid-row: 3 / 6;
+        width: 120%;
+    }
+}
+
+@media (min-width: 600px){
+    html{
+        font-size: 65%;
+    }
+    
+    .banner button {
+        font-size: 65%;
+    }
+    .card-info button {
+        font-size: 65%;
+    }
+    .btn{
+        font-size: 65%;
+    }
+    .sessao-contato{
+        height: 60vh;
+    }
+    .sessao-orcamento{
+        height: 60vh;
+    }
+
+    .conhecimentos{
+        display: grid;
+        grid-template-columns: repeat(16, 1fr);
+        grid-template-rows: repeat(6, 7rem);
+        row-gap: 1rem;
+    }
+
+    .conhecimentos-img-wrapper{
+        grid-column: 7 / 11;
+        grid-row: 3 / 6;
+        width: 100%;
+    }
+
+
+}
+
+@media (min-width: 900px){
+    html {
+        font-size: 90%;
+    }
+
+    .conhecimentos-img-wrapper{
+        grid-column: 7 / 11;
+        grid-row: 2 / 6;
+        width: 100%;
+    }
+
+    .sessao-contato{
+        height: 100vh;
+    }
+    .sessao-orcamento{
+        height: 100vh;
+    }
+
+}
+
+@media (min-width: 1200px){
+    html {
+        font-size: 95%;
+    }
+
+    .sessao-contato{
+        height: 100vh;
+    }
+
+    .sessao-orcamento{
+        height: 100vh;
+    }
+}
+
